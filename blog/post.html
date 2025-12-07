@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading...</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="../index.html">My Personal Blog</a></h1>
+      <div class="about">
+        <h2>Merve</h2>
+        <p>I'm trying to navigate the life like everyone else. I do machine learning for living.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="post">
+      <div id="post-content" class="post-content">
+        <p>Loading...</p>
+      </div>
+    </article>
+
+    <div class="back-link">
+      <a href="../index.html">← All posts</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025</p>
+    </div>
+  </footer>
+
+  <script>
+    // Get the markdown file from URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const mdFile = urlParams.get('md');
+
+    if (mdFile) {
+      // Fetch and render the markdown file
+      // Ensure the path is relative to the blog directory
+      const filePath = mdFile.startsWith('./') || mdFile.startsWith('/') ? mdFile : `./${mdFile}`;
+      fetch(filePath)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text();
+        })
+        .then(markdown => {
+          // Parse markdown to HTML
+          const html = marked.parse(markdown);
+          document.getElementById('post-content').innerHTML = html;
+
+          // Set page title from the first h1 in the content
+          const firstH1 = document.querySelector('#post-content h1');
+          if (firstH1) {
+            document.title = firstH1.textContent;
+          }
+        })
+        .catch(error => {
+          document.getElementById('post-content').innerHTML =
+            '<p>Error loading post. Please try again.</p>';
+          console.error('Error loading markdown:', error);
+        });
+    } else {
+      document.getElementById('post-content').innerHTML =
+        '<p>No post specified.</p>';
+    }
+  </script>
+</body>
+</html>
