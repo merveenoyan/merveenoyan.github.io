@@ -1,6 +1,9 @@
 # Build in Public
 
-In [my previous post](../2025.md) I have mentioned about my lack of (feeling of) progress in French and how I burned out of it. Ever since that post I went to Alpes to celebrate xmas with my mother. I noticed during the entire trip I have spoken French to handle everything and it went smooth. I had an epiphany, I actually have come so far but I have absolutely zero feedback around it. I decided to take a step back on what I did in 2025 about my work and commit to new goals and build in public.
+In [my previous post](../2025.md) I have mentioned about my lack of (feeling of) progress in French and how I burned out of it. Ever since that post I went to Alpes to celebrate xmas with my mother. I noticed during the entire trip I have spoken French to handle everything and it went smooth. I had an epiphany, I actually have come so far but I have absolutely zero feedback around it. Progress does matter and I have to see it for myself. 
+
+With work I often have the feeling that the whole process never ends. It's a fast-paced field, I will fall behind if I don't ship or learn. Since it feels like sisyphos and the stone, it's pretty similar to what I felt with French too.
+I have I decided to take a step back on what I did in 2025 about my work and commit to new goals and build in public, maybe get feedback if my work was of use.
 
 I committed this year to lower the barrier of entry for developers to build with open-source vision and multimodal models. These models are not complex as people think they are, but I noticed that people hesitate a little. To do this, I have built smol-vision and it was loved a ton by community! 
 
