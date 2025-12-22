@@ -13,10 +13,11 @@ We have written two major blogs around vision LMs this year, you might want to c
 
 I have written a book about vision language models with my friends in SmolVLM 📖
 
-<div style="display: flex; gap: 10px; justify-content: space-between; align-items: center;">
-  <img src="https://huggingface.co/datasets/merve/personal-website/resolve/main/book.png" alt="book" style="width: 40%;">
-  <img src="https://huggingface.co/datasets/merve/personal-website/resolve/main/paper.png" alt="paper" style="width: 60%;">
+<div style="display: flex; gap: 10px; justify-content: center; align-items: center;">
+  <img src="https://huggingface.co/datasets/merve/personal-website/resolve/main/book.png" alt="book" style="width: calc(40% - 5px); height: auto;">
+  <img src="https://huggingface.co/datasets/merve/personal-website/resolve/main/paper.png" alt="paper" style="width: calc(60% - 5px); height: auto;">
 </div>
+
 
 This was a huge commitment. I got many questions from people whether it's worth writing a book or not. To be honest it takes almost all your weekends. This was something I wanted to do once in a lifetime. I learnt a lot from O'Reilly books when I was a junior data scientist, I even wrote [a blog](https://merveenoyan.medium.com/my-reviews-on-machine-learning-data-science-and-statistics-books-d1d70924b3d) on my honest take on those books. I wanted to give back in a way.
 
